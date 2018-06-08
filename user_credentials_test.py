@@ -91,6 +91,9 @@ class TestCredential(unittest.TestCase):
         self.assertEqual("self.new_credential.site_password".)
 
 
+if __name__== '__main__':
+    unittest.main()
+
 
 
 
