@@ -73,18 +73,7 @@ class TestCredential(unittest.TestCase):
 
     '''
 
-    def test_check_user(self):
-        '''
-        The method counterchecks the user existance from  the user_list
-        '''
-
-        self.new_user.save_user()
-        test_user = User("Ann","Bridgit","brig13")
-
-        test_user.save_user()
-
-
-
+    def setUp()
 
 
 
