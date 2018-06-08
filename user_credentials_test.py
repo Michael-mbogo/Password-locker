@@ -64,6 +64,32 @@ class TestUser(unittest.TestCase):
 
 #Credential class
 
+class TestCredential(unittest.TestCase):
+    '''
+    Test class defining tests for credential class behavior
+
+    Args:
+    To get in the credential area, the user login must match the user information
+
+    '''
+
+    def setUp(self):
+        '''
+        Runs the method before each test
+        '''
+
+        self.new_credential = Credential("Mike_mmike","Michael Mbogo","Facebook","Michaelmm17")
+
+    def test_init(self):
+        '''
+        Tests if the object is initialized properly
+        '''
+
+        self.assertEqual("self.new_credential.user_name")
+        self.assertEqual("self.new_credential.account_name")
+        self.assertEqual("self.new_credential.site")
+        self.assertEqual("self.new_credential.site_password".)
+
 
 
 
