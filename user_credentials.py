@@ -23,3 +23,18 @@ class User:
         self.first_name = first_name
         self.last_name = last_name
         self.password = password
+
+
+class Credentials:
+    '''
+    The class generates new instances of Credentials
+    '''
+
+    credentials = []
+
+    def __init__(self,user_name,account_name,site,site_password):
+
+        self.user_name = user_name
+        self.account_name = account_name
+        self.site = site
+        self.site_password = site_password 
