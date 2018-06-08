@@ -64,17 +64,6 @@ class TestUser(unittest.TestCase):
 
 #Credential class
 
-class TestCredential(unittest.TestCase):
-    '''
-    Test class defining tests for credential class behavior
-
-    Args:
-    To get in the credential area, the user login must match the user information
-
-    '''
-
-    def setUp()
-
 
 
 
