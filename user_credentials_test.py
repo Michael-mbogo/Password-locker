@@ -47,6 +47,7 @@ class TestUser(unittest.TestCase):
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
 
+
     def test_delete_user(self):
         '''
         Deletes the user from the user_list
@@ -59,6 +60,76 @@ class TestUser(unittest.TestCase):
 
         self.new_user.delete_user()
         self.assertEqual(len(User.user_list),1)
+
+
+#Credential class
+
+class TestCredential(unittest.TestCase):
+    '''
+    Test class defining tests for credential class behavior
+
+    Args:
+    To get in the credential area, the user login must match the user information
+
+    '''
+
+    def test_check_user(self):
+        '''
+        The method counterchecks the user existance from  the user_list
+        '''
+
+        self.new_user.save_user()
+        test_user = User("Ann","Bridgit","brig13")
+
+        test_user.save_user()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
