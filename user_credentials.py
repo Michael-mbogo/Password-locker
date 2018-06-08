@@ -25,16 +25,16 @@ class User:
         self.password = password
 
 
-class Credentials:
+class Credential:
     '''
     The class generates new instances of Credentials
     '''
 
-    credentials = []
+    user_credential = []
 
     def __init__(self,user_name,account_name,site,site_password):
 
         self.user_name = user_name
         self.account_name = account_name
         self.site = site
-        self.site_password = site_password 
+        self.site_password = site_password
