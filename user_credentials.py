@@ -18,11 +18,20 @@ class User:
 
         User.user_list.remove(self)
 
+    @classmethod
+    def display_user(cls):
+        '''
+        method that returns user user list
+        '''
+        return cls.user_list
+
+
     def __init__(self,first_name,last_name,password):
 
         self.first_name = first_name
         self.last_name = last_name
         self.password = password
+
 
 
 class Credential:

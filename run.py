@@ -46,5 +46,6 @@ def main():
 
             print(f"Thank you {first_name} {last_name} for joining us. Your passoword is {password}")
 
-
+        elif short_code == "li":
+            print()
 main()
