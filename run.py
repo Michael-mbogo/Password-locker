@@ -62,7 +62,7 @@ def main():
     print('\n')
 
     while True:
-        print("Use these shortcodes : su- create a new account, li- log in, du- display user, del - delete user, ex- exit password locker ")
+        print("Use these shortcodes : su- create a new account, li- log in, du- display user, del - delete user, ex- exit password locker, nc- new credential, dc- display credentials, del- delete credential, ex-Exit  ")
 
         short_code = input().lower()
 
@@ -86,13 +86,8 @@ def main():
             print('Enter user name and password to log in')
             user_name = input('Username: ')
             site_password = input('Password: ')
-            user_exists = verify_user(user_name,site_password)
-            if user_exists == user_name:
-                print(' ')
-                print(f'Welcome back. What can i do for you?')
-                print(' ')
-                while True:
-                    print('.'*60)
+
+
 
 
 
