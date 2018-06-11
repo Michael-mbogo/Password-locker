@@ -22,12 +22,23 @@ def delete_user(user):
     '''
     user.delete_user()
 
+def display_user():
+    return User.display_user()
+
 def verify_user(first_name, password):
     '''
     Function that verifys the existance of a user
     '''
     check_user = Credential.check_user(first_name, password)
     return check_user
+
+def create_credential(user_name,account_name,site,site_password):
+    '''
+    Fn to create a new credential
+    '''
+    new_credential = Credential(user_name,account_name,site,site_password)
+    return new_credential
+
 
 
 def main():
