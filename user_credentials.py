@@ -60,6 +60,15 @@ class Credential:
 
         Credential.credential_list.append(self)
 
+    @classmethod
+    def display_credentials(cls):
+        '''
+        Method that returns credential list
+        '''
+
+        return cls.credential_list
+
+
 
 
 

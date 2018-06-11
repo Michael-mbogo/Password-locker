@@ -22,6 +22,14 @@ def delete_user(user):
     '''
     user.delete_user()
 
+def verify_user(first_name, password):
+    '''
+    Function that verifys the existance of a user
+    '''
+    check_user = Credential.check_user(first_name, password)
+    return check_user
+
+
 def main():
     print("Jambo, Welcome to password locker. Are you a member?")
     print('\n')

@@ -100,7 +100,7 @@ class TestCredential(unittest.TestCase):
         self.new_credential.save_credential()
         google = Credential('AnnB','Annbrig','twitter','Michaelmm17')
         google.save_credential()
-        self.assertEqual(len(Credential.credential_list),1)
+        self.assertEqual(len(Credential.credential_list),2)
 
     def tearDown(self):
         '''
@@ -110,21 +110,24 @@ class TestCredential(unittest.TestCase):
         Credential.credential_list = []
         User.user_list = []
 
-    def test_save_multiple_credentials(self):
-        '''
-        Test to check whether multiple functions can be saved
-        '''
-
-        self.new_credential.save_credential()
-        test_credential = Credential('Kevin','Kevin Mwan','Facebook','Kevkev')
-        test_credential.save_credential()
-        self.assertEqual(len(Credential.credential_list),2)
+    # def test_save_multiple_credentials(self):
+    #     '''
+    #     Test to check whether multiple functions can be saved
+    #     '''
+    #
+    #     self.new_credential.save_credential()
+    #     test_credential = Credential('Kevin','Kevin Mwan','Facebook','Kevkev')
+    #     test_credential.save_credential()
+    #     self.assertEqual(len(Credential.credential_list),2)
 
     def test_display_credentials(self):
         '''
         Displays the credentials
         '''
-        self.new_credential.save_credential()
+        self.assertEqual(Credential.display_credentials(), Credential.credential_list)
+
+
+
 
 
 
