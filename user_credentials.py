@@ -68,6 +68,16 @@ class Credential:
 
         return cls.credential_list
 
+    @classmethod
+    def find_by_site(cls, site):
+        '''
+        Method that helps search for username and returns credential
+        '''
+
+        for credential in cls.credential_list:
+            if credential.site == site:
+                return credential
+
 
 
 

@@ -127,6 +127,19 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(Credential.display_credentials(), Credential.credential_list)
 
 
+    def test_find_by_site(self):
+        '''
+        Function that helps search for a credential by user name
+        '''
+        self.new_credential.save_credential()
+        test_credential = Credential('Kevin','Kevin Mwan','Facebook','Kevkev')
+        test_credential.save_credential()
+        found_credential = Credential.find_by_site('Facebook')
+        self.assertEqual(found_credential.site, test_credential.account_name)
+
+
+
+
 
 
 
