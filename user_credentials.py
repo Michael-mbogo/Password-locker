@@ -43,15 +43,15 @@ class Credential:
     credential_list = []
 
     @classmethod
-    def check_user(cls,first_name,password):
+    def check_user_exist(cls,user_name,site_password):
         '''
         checks whether the info entered matches
         '''
 
         for user in user_list:
-            if (user.first_name == first_name and user.password == password):
-                current_user = user.first_name
-        return current_user
+            if (user.user_name == user_name and user.site_password == site_password):
+                return True
+            return false
 
     def save_credential(self):
         '''

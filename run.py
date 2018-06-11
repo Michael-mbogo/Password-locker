@@ -25,12 +25,12 @@ def delete_user(user):
 def display_user():
     return User.display_user()
 
-def verify_user(first_name, password):
-    '''
-    Function that verifys the existance of a user
-    '''
-    check_user = Credential.check_user(first_name, password)
-    return check_user
+def login_user(user_name,site_password):
+    """
+    function that checks whether a user exist and then login the user in.
+    """
+    check_user_exist = Credentials.check_user_exist(user_name,site_password)
+    return check_user_exist
 
 def create_credential(user_name,account_name,site,site_password):
     '''
@@ -38,6 +38,27 @@ def create_credential(user_name,account_name,site,site_password):
     '''
     new_credential = Credential(user_name,account_name,site,site_password)
     return new_credential
+
+def save_credential(credential):
+    '''
+    Fn that save a created credential
+    '''
+    Credential.save_credential(credential)
+
+def display_credentials(user_name,site):
+    '''
+    Fn that lets us display a list of credentials
+    '''
+    Credential.display_credentials(user_name,site)
+
+def find_credential(user_name):
+    '''
+    Fn that lets us serach and find the credential
+    '''
+    return Credential.found_credential(user_name)
+
+
+
 
 
 
@@ -66,5 +87,14 @@ def main():
             print(f"Thank you {first_name} {last_name} for joining us. Your passoword is {password}")
 
         elif short_code == "li":
-            print()
+            print(' ')
+            print('Enter user name and password to log in')
+            user_name = input('Username: ')
+            site_password = input('Password: ')
+            sign_in = login_user(user_name, site_password)
+                if sign_in == True:
+                print(f'Nice to have you back {user_name}.)
+
+
+
 main()
