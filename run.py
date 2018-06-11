@@ -25,12 +25,13 @@ def delete_user(user):
 def display_user():
     return User.display_user()
 
-def login_user(user_name,site_password):
-    """
-    function that checks whether a user exist and then login the user in.
-    """
-    check_user_exist = Credentials.check_user_exist(user_name,site_password)
-    return check_user_exist
+def verify_user(first_name,password):
+    '''
+    function that verifys login info
+    '''
+    checking_user = Credential.check_user(first_name,password)
+    return checking_user
+
 
 def create_credential(user_name,account_name,site,site_password):
     '''
@@ -91,9 +92,12 @@ def main():
             print('Enter user name and password to log in')
             user_name = input('Username: ')
             site_password = input('Password: ')
-            sign_in = login_user(user_name, site_password)
-                if sign_in == True:
-                print(f'Nice to have you back {user_name}.)
+            user_exists = verify_user(user_name,site_password)
+            if user_exists == user_name:
+                print(' ')
+                print('You do no han an account,   ')
+
+
 
 
 

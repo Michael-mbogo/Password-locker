@@ -77,6 +77,23 @@ class TestCredential(unittest.TestCase):
     Test case defining cases for credentials class behavior
     '''
 
+    def test_check_user(self):
+        '''
+        Function to confirm the login info
+        '''
+        self.new_user = User('Mary','Mbaru','Mark17')
+        self.new_user.save_user()
+        user2 = User('Maria','Mwema','Maria17')
+        user2.save_user()
+
+        for user in User.user_list:
+            if user.first_name == user2.first_name and user.password == user2.password:
+                current_user = user.first_name
+                return current_user
+
+
+
+
     def setUp(self):
         '''
         function to create an account before each test
