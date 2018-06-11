@@ -1,3 +1,4 @@
+import pyperclip
 import unittest
 from user_credentials import User, Credential
 
@@ -127,15 +128,16 @@ class TestCredential(unittest.TestCase):
         self.assertEqual(Credential.display_credentials(), Credential.credential_list)
 
 
-    def test_find_by_site(self):
+    def test_find_by_user_name(self):
         '''
         Function that helps search for a credential by user name
         '''
         self.new_credential.save_credential()
         test_credential = Credential('Kevin','Kevin Mwan','Facebook','Kevkev')
         test_credential.save_credential()
-        found_credential = Credential.find_by_site('Facebook')
-        self.assertEqual(found_credential.site, test_credential.account_name)
+        found_credential = Credential.find_by_user_name('Kevin')
+        self.assertEqual(found_credential,test_credential)
+
 
 
 
