@@ -1,5 +1,5 @@
 import unittest
-from user_credentials import User
+from user_credentials import User, Credential
 
 class TestUser(unittest.TestCase):
     '''
@@ -71,14 +71,71 @@ class TestUser(unittest.TestCase):
 
 
 #Credential class
-class TestCredentials(unittest.TestCase):
+class TestCredential(unittest.TestCase):
     '''
     Test case defining cases for credentials class behavior
     '''
 
+    def setUp(self):
+        '''
+        function to create an account before each test
+        '''
+        self.new_credential = Credential('Mikey','Michael-mbogo','Facebook','Michaelmm17')
+
+    def test__init__(self):
+        '''
+        Method testing proper initialization
+        '''
+
+        self.assertEqual(self.new_credential.user_name,"Mikey")
+        self.assertEqual(self.new_credential.account_name,"Michael-mbogo")
+        self.assertEqual(self.new_credential.site,"Facebook")
+        self.assertEqual(self.new_credential.site_password,"Michaelmm17")
+
+    def test_save_credential(self):
+        '''
+        saves credentials
+        '''
+
+        self.new_credential.save_credential()
+        google = Credential('AnnB','Annbrig','twitter','Michaelmm17')
+        google.save_credential()
+        self.assertEqual(len(Credential.credential_list),1)
+
+    def tearDown(self):
+        '''
+        Clears the list after each test
+        '''
+
+        Credential.credential_list = []
+        User.user_list = []
+
+    def test_save_multiple_credentials(self):
+        '''
+        Test to check whether multiple functions can be saved
+        '''
+
+        self.new_credential.save_credential()
+        test_credential = Credential('Kevin','Kevin Mwan','Facebook','Kevkev')
+        test_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
+
+    def test_display_credentials(self):
+        '''
+        Displays the credentials
+        '''
+        self.new_credential.save_credential()
+
+
+
+
+
+
+
+
     # def test_check_user(self):
     #     '''
-    #     Funcion testing login Function
+    #     Funcion testing login Functionuser
     #     '''
     #     self.new_user = User("Mike","Mbogo","Mikemm17")
     #     self.new_user.save_user()

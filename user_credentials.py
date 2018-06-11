@@ -34,12 +34,36 @@ class User:
 
 
 
+
 class Credential:
     '''
     The class generates new instances of Credentials
     '''
 
-    user_credential = []
+    credential_list = []
+
+    @classmethod
+    def check_user(cls,first_name,password):
+        '''
+        checks whether the info entered matches
+        '''
+
+        for user in user_list:
+            if (user.first_name == first_name and user.password == password):
+                current_user = user.first_name
+        return current_user
+
+    def save_credential(self):
+        '''
+        saves Credentials
+        '''
+
+        Credential.credential_list.append(self)
+
+
+
+
+
 
 
 
@@ -49,14 +73,3 @@ class Credential:
         self.account_name = account_name
         self.site = site
         self.site_password = site_password
-
-    @classmethod
-    def check_user(cls,first_name,password):
-            '''
-            checks whether the info entered matches
-            '''
-
-            for user in user_list:
-                if (user.first_name == first_name and user.password == password):
-                    current_user = user.first_name
-            return current_user    
