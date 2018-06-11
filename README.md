@@ -10,7 +10,8 @@ Password locker as the name suggests is a python application run in the terminal
 Python3.6
 
 # SETUP
-git clone https://github.com/Michael-mbogo/Password-locker.git
+git clone: https://github.com/Michael-mbogo/Password-locker.git
+
 cd Password-locker
 
 # Run the app
