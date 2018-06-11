@@ -57,6 +57,7 @@ def find_credential(user_name):
     Fn that lets us serach and find the credential
     '''
     return Credential.found_credential(user_name)
+
 def main():
     print("Jambo, Welcome to password locker. Are you a member?")
     print('\n')
@@ -92,7 +93,5 @@ def main():
 
 
 
-
-
-
-main()
+if __name__=='__main__':
+        main()
