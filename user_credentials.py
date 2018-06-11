@@ -43,7 +43,7 @@ class Credential:
     credential_list = []
 
     @classmethod
-    def chaeck_user(cls,first_name,password):
+    def check_user(cls,first_name,password):
         '''
         Method that checks for matching info
         '''
@@ -51,7 +51,7 @@ class Credential:
         for user in User.user_list:
             if (user.first_name == first_name and user.password == password):
                 current_user = user.first_name
-        return current_user        
+        return current_user
 
 	# @classmethod
 	# def check_user(cls,first_name,password):
@@ -59,25 +59,24 @@ class Credential:
 	# 	Method that checks if the name and password match
 	# 	'''
 	# 	current_user = ''
-	# 	for user in User.users_list:
 	# 		if (user.first_name == first_name and user.password == password):
 	# 			current_user = user.first_name
 	# 	return current_user
 
-    @classmethod
-    def check_user(self):
-        '''
-        checks whether the info entered matches
-        '''
-
-        for user in user_list:
-            if (user.user_name == user_name and user.site_password == site_password):
-                return True
-            return false
+    # @classmethod
+    # def check_user(self):
+    #     '''
+    #     checks whether the info entered matches
+    #     '''
+    #
+    #     for user in user_list:
+    #         if (user.user_name == user_name and user.site_password == site_password):
+    #             return True
+    #         return false
 
     def save_credential(self):
         '''
-        saves Credentials
+        # 	for user in User.users_list:
         '''
 
         Credential.credential_list.append(self)

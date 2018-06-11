@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.6
-from user_credentials import User
+from user_credentials import User, Credential
 
 #creating a user
 def create_user(fname,lname,password):
@@ -57,12 +57,6 @@ def find_credential(user_name):
     Fn that lets us serach and find the credential
     '''
     return Credential.found_credential(user_name)
-
-
-
-
-
-
 def main():
     print("Jambo, Welcome to password locker. Are you a member?")
     print('\n')
@@ -95,7 +89,12 @@ def main():
             user_exists = verify_user(user_name,site_password)
             if user_exists == user_name:
                 print(' ')
-                print('You do no han an account,   ')
+                print(f'Welcome back. What can i do for you?')
+                print(' ')
+                while True:
+                    print('.'*60)
+
+
 
 
 
