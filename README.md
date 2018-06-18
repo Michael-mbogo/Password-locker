@@ -21,4 +21,4 @@ $ ./run.py
 
 # Testing the app
 In your terminal:
-$ python3.6 user_credentials_test.py
+$ python3.6user_credentials_test.py

@@ -8,6 +8,8 @@ class TestUser(unittest.TestCase):
 
     '''
 
+    
+
     def setUp(self):
         '''
         method that runs before each Test
@@ -165,25 +167,6 @@ class TestCredential(unittest.TestCase):
 
 
 
-
-
-
-    # def test_check_user(self):
-    #     '''
-    #     Funcion testing login Functionuser
-    #     '''
-    #     self.new_user = User("Mike","Mbogo","Mikemm17")
-    #     self.new_user.save_user()
-    #     user2 = User('Kevin','Mbogo','Mikemm17')
-    #     user2.save_user()
-    #
-    #     for user in User.user_list:
-    #         if user.first_name == user2.first_name and user.password == user2.password:
-    #             current_user = user.first_name
-    #     return current_user
-    #     self.assertEqual(current_user, credential.check_user(user2.password, user2.first_name))
-    #
-    #
 
 
 
