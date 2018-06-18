@@ -8,7 +8,7 @@ class TestUser(unittest.TestCase):
 
     '''
 
-    
+
 
     def setUp(self):
         '''
@@ -83,7 +83,7 @@ class TestCredential(unittest.TestCase):
         '''
         Function to confirm the login info
         '''
-        self.new_user = User('Mary','Mbaru','Mark17')
+        self.new_user = User('Esther','Mumbi','essy17')
         self.new_user.save_user()
         user2 = User('Maria','Mwema','Maria17')
         user2.save_user()
